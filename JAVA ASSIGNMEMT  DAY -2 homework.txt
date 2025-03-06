@@ -1,0 +1,284 @@
+     
+
+                                   *******DAY 2 homework*****
+------------------------------------------------------------------------------------------------------------
+1)
+public class Q01{
+	static int i;
+	static float f;
+	static double d;
+	static char ch;
+	static boolean b;
+	static byte by;
+	static short s;
+	static long l;
+	static String S;	
+	
+	public static void main(String args[]){
+		System.out.println("Default int: " + i);
+		System.out.println("Default byte: " + by);
+		System.out.println("Default char: " + ch);
+		System.out.println("Default boolean: " + b);
+		System.out.println("Default float: " + f);
+		System.out.println("Default double: " + d);
+		System.out.println("Default String: " + S);
+		System.out.println("Default short: " + s);
+		System.out.println("Default long: " + l);	
+	}
+}
+------------------------------------------------------------------------------------------------------------
+
+
+2)
+public class Q02{
+	public static void main(String[] args){
+		int a = 54;
+		float f = a;
+		System.out.println(f);
+	}
+}
+
+------------------------------------------------------------------------------------------------------------
+
+3)
+public class Q03{
+	public static void main(String[] args){
+		double d = 123.675;
+		int i = (int) d;
+		System.out.println(i);	
+	}
+}
+
+------------------------------------------------------------------------------------------------------------
+
+4)
+import java.util.Scanner;
+public class Q04{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		double avg;
+		System.out.print("Enter first number: ");
+		int a = sc.nextInt();
+		System.out.print("Enter second number: ");
+		int b = sc.nextInt();
+		System.out.print("Enter third number: ");
+		int c = sc.nextInt();
+		avg = ((double)a + (double)b + (double)c)/3;
+		System.out.printf("Average of 3: %.2f",avg);
+	}
+}
+
+------------------------------------------------------------------------------------------------------------
+
+5)
+public class Q05{
+	public static void main(String[] args){
+		int q = 0b1010;
+		int x = 020;
+		int y = 52;
+		int z = 0x01F1;// 0 + 256 + 240 +  1 
+		System.out.println(q + " " + x + " " + y + " " + z);
+		
+		float f = 123.95f;
+		double d = 123561.6445462178;
+		System.out.println(f + " " + d);
+		
+	}
+}
+
+------------------------------------------------------------------------------------------------------------
+
+6)
+public class Q06{
+	public static void main(String[] args){
+		for(int i=97; i<123; i++){
+			System.out.println(i + " " +(char)i + " ");
+		}
+		System.out.println();
+		
+		String s = "hello world";
+		System.out.println(s);
+		for(int i=0; i<s.length(); i++){
+			System.out.print((int)(s.charAt(i)) + " ");
+		}
+	}
+}
+------------------------------------------------------------------------------------------------------------
+
+7)
+public class Q07{
+	public static void main(String[] args){
+		boolean check = true;
+		if(check){
+			System.out.println("in if block");
+		}else {
+			System.out.println("in another if block");
+		}	
+		check = false;
+		
+		do{
+			System.out.println("Executes once");
+		}while(check);
+	}
+}
+------------------------------------------------------------------------------------------------------------
+
+8)
+import java.util.Scanner;
+public class Q08{
+	public static void main(String[] args){
+		Scanner sc = new Scanner (System.in);
+		System.out.print("Enter first number: ");
+		int a = sc.nextInt();
+		System.out.print("Enter second number: ");
+		int b = sc.nextInt();
+		System.out.println("MENU: ");
+		System.out.println("1. ADDITION ");
+		System.out.println("2. SUBTRACTION ");
+		System.out.println("3. MULTIPLICATION ");
+		System.out.println("4. DIVISION ");
+		System.out.println("5. FIND REMAINDER ");
+		System.out.print("Enter your Option: ");		
+		int c = sc.nextInt();
+		while(c!=6){
+			switch(c){
+				case 1: System.out.println("Addition of " + a + " + " + b + " = " + (a+b));
+						break;
+				case 2: System.out.println("Difference between " + a + " - " + b + " = " + (a-b));
+						break;
+				case 3: System.out.println("Multiplication of " + a + " x " + b + " = " + (a*b));
+						break;
+				case 4: System.out.println("Quotient in division of " + a + " / " + b + " = " + ((float)a/(float)b));
+						break;
+				case 5: System.out.println("Remainder in division of " + a + " and " + b + " = " + ((float)a%(float)b));
+						break;
+				default:System.out.println("INVALID OPTION");
+						break;
+			}
+			System.out.print("Enter your Option: ");
+			c = sc.nextInt();
+		}
+		System.out.println("EXITING PROGRAMMING!");
+	}
+}
+
+------------------------------------------------------------------------------------------------------------
+9)
+import java.util.Scanner;
+public class Q09{
+	public static void main(String[] args){
+		Scanner sc = new Scanner (System.in);
+		System.out.print("Enter first number: ");
+		int a = sc.nextInt();
+		System.out.print("Enter second number: ");
+		int b = sc.nextInt();
+		System.out.println("MENU: ");
+		System.out.println("1. ADDITION ");
+		System.out.println("2. SUBTRACTION ");
+		System.out.println("3. MULTIPLICATION ");
+		System.out.println("4. DIVISION ");
+		System.out.println("5. FIND REMAINDER ");
+		System.out.print("Enter your Option: ");		
+		int c = sc.nextInt();
+		while(c!=6){
+			switch(c){
+				case 1: System.out.println("Addition of " + a + " + " + b + " = " + (a+b));
+						break;
+				case 2: System.out.println("Difference between " + a + " - " + b + " = " + (a-b));
+						break;
+				case 3: System.out.println("Multiplication of " + a + " x " + b + " = " + (a*b));
+						break;
+				case 4: System.out.println("Quotient in division of " + a + " / " + b + " = " + ((float)a/(float)b));
+						break;
+				case 5: System.out.println("Remainder in division of " + a + " and " + b + " = " + ((float)a%(float)b));
+						break;
+				default:System.out.println("INVALID OPTION");
+						break;
+			}
+			System.out.print("Enter your Option: ");
+			c = sc.nextInt();
+		}
+		System.out.println("EXITING PROGRAMMING!");
+	}
+}
+
+10)
+
+------------------------------------------------------------------------------------------------------------
+
+public class Q10{
+	public static void main(String[] args){
+		int a=9;
+		int b=10;
+		if(a>=1) {
+			System.out.println(a);
+		}
+		if(b<50) {
+			System.out.println(b);
+		}
+		if(a==b){
+			System.out.println("same numbers");
+		}
+		if(a>b){
+			System.out.println(a + " is greater");
+		}
+	}
+}
+
+------------------------------------------------------------------------------------------------------------
+11)
+
+import java.io.Scanner;
+public class Q11{
+	public static void main(String[] args){
+		Scanner sc = new Scanner (System.in);
+		int x =  sc.nextInt();
+		
+		if(x>0 && x%2==0){
+			System.out.println(x + " is even and positive");
+	}
+}
+
+
+------------------------------------------------------------------------------------------------------------
+12)
+
+import java.util.Scanner;
+public class Q12{
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter first number: ");
+		int a = sc.nextInt();
+		System.out.print("Enter second number: ");
+		int b = sc.nextInt();
+		System.out.print("Enter your choice \n1.+ \n2.- \n3.* \n4./ \n5.% \n6.++ \n7.--");
+		sc.nextLine();
+		int c = sc.nextInt();
+		if(c==1){
+			a += b; 
+			System.out.println("Addition: " + a);
+		} else if(c==2){
+			a -= b;
+			System.out.println("Difference: " + a);
+		} else if(c==3){
+			a *= b;
+			System.out.println("Multplication: " + a);
+		} else if(c==4){
+			a /= b;
+			System.out.println("Division: " + a);
+		} else if(c==5){
+			a %= b;
+			System.out.println("Remainder: " + a);
+		} else if(c==6){
+			a++;
+			++b;
+			System.out.println("Increment Assigment: " + a + " " + b);
+		}  else if(c==7){
+			a--;
+			--b;
+			System.out.println("Decrement Assigment: " + a + " " + b);
+		} else {
+			System.out.println("INVALID OPTION");
+		}
+	}
+}

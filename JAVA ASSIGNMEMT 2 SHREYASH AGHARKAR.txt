@@ -1,0 +1,468 @@
+                                              JAVA ASSIGNMEMT SHREYASH AGHARKAR     
+
+
+***ASSIGNMENT 2 JAVA****
+
+1)
+
+public class Q01{
+	public static void main(String[] args){
+		int a = 4;
+		int b = 6;
+		System.out.println("Before Swapping: \nA = " + a + "\tB = " + b);
+		a = a ^ b;
+		b = a ^ b;
+		a = a ^ b;
+		System.out.println("After Swapping: \nA = " + a + "\tB = " + b);
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+2)
+public class Q02{
+	public static void main(String[] args){
+		int a = 9, b = 10;
+		check(a);
+		check(b);
+	}
+	
+	public static void check(int a){
+		if((a&1) == 0){
+			System.out.println(a + " is even");
+		} else {
+			System.out.println(a + " is odd");
+		}
+	}
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+3)
+public class Q03{
+	public static void main(String[] args){
+		int x = 123456;
+		int res = 0;
+		while(x!=0){
+			res = res + (x%10);
+			x = x/10;
+		}
+		System.out.println("Sum: " + res);
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------4)
+public class Q04{
+	public static void main(String[] args){
+		int n = 15;
+		
+		if(n<0){
+			n = -n;
+		}
+		
+		while(n>3){
+			n = (n & 3) + (n >> 2);
+		}
+		
+		if(n==0 || n==3)
+			System.out.println("Division by 3");
+		else
+			System.out.println("Not division by 3");
+	
+	}
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+5)
+public class Q05{
+	public static void main(String[] args){
+		int x = 3, y = 9;
+		System.out.println("Before Swapping: \nX = " + x + "\nY = " + y); 
+		x += y;
+		y -= x;
+		y = -y;
+		x -= y;
+		System.out.println("After Swapping: \nX = " + x + "\nY = " + y); 
+	}
+}
+
+6)
+----------------------------------------------------------------------------------------------------------------------
+
+public class Q06{
+	public static void main(String[] args){
+		int x=8, y=4, z=1;
+		int res = ((x>y && x>z)? x : (y>x && y>z)? y : z);
+		System.out.println(res + " is the largest number.");
+	}
+}
+----------------------------------------------------------------------------------------------------------------------
+
+7)
+import java.util.Scanner;
+public class Q07{
+	public static void main(String[] args){
+		Scanner sc = new Scanner (System.in);
+		int y = sc.nextInt();
+		if(y%400==0 || (y%4==0 && y%100!=0))
+			System.out.println(y + " is a leap year.");
+		else
+			System.out.println(y + " is not a leap year."); 
+	}
+}
+----------------------------------------------------------------------------------------------------------------------
+
+8)
+public class Q08{
+	public static void main(String[] args){
+		boolean x = true, y = false, z = true;
+		check(x,y,z);
+		x = true; y = false; z = false;
+		check(x,y,z);
+	}
+	
+	public static void check(boolean a, boolean b, boolean c){
+		if((a && (b||c)) || (c && (a||b)) || (b && (a||c))){
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+	} 
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+9)
+public class Q09{
+	public static void main(String[] args){
+		int x = 40, y = 52;
+		check(x);
+		check(y);
+	}
+	
+	public static void check(int a){
+		System.out.println((a>=20 && a<=50)? a + " lies in the range." : a + " doesn't lie within the range");
+	} 
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+10)
+public class Q10{
+	public static void main(String[] args){
+		char x = 'a';
+		check(x);
+		x = 'q';
+		check(x);
+		x = 'A';
+		check(x);
+		x = 'R';
+		check(x);
+	}
+	
+	public static void check(char a){
+		char ch = Character.toLowerCase(a);
+		String str = (ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch =='u')? a + " is a vowel." : a + " is a consonant";  
+		System.out.println(str);
+	} 
+}
+----------------------------------------------------------------------------------------------------------------------
+
+11)
+public class Q11{
+	public static void main(String[] args){
+		check(8);
+		check(7);
+	}
+	
+	public static void check(int a){
+		if(a<0) a = -a;
+		if((a & (a-1))==0)
+			System.out.println(a + " is a power of two");
+		else
+			System.out.println("Oops! " + a + " is not a power of two");	
+	} 
+}
+
+----------------------------------------------------------------------------------------------------------------------
+12)
+public class Q12{
+	public static void main(String[] args){
+		check(7);
+		check(20);
+		check(-9);
+	}
+	
+	public static void check(int a){
+		//Use bitwise left shift (  <<  ) 
+		int result = a << 3;
+		System.out.println(result);
+	} 
+}
+
+----------------------------------------------------------------------------------------------------------------------
+13)
+
+public class Q13{
+	public static void main(String[] args){
+		abs(7);
+		abs(-20);
+	}
+	
+	public static void abs(int num){ 
+		int mask = num >> 31; 
+		int abs = (num + mask) ^ mask;
+		System.out.println(abs);
+	} 
+}	
+
+// 00000000 00000000 00000000 00010100
+// 11111111 11111111 11111111 11101011
+// 11111111 11111111 11111111 11101100  
+// 11111111 11111111 11111111 11111111
+// 00000000 00000000 00000000 00010101
+// 11111111 11111111 11111111 11101010
+
+// 11111111 11111111 11111111 11101011
+// 11111111 11111111 11111111 11111111
+// 00000000 00000000 00000000 00010100
+
+----------------------------------------------------------------------------------------------------------------------
+
+14)
+
+public class Q14{
+	public static void main(String[] args){
+		setbits(7);
+		setbits(12);
+	}
+	
+	public static void setbits(int num){ 
+		int count = 0;
+		while(num > 0){
+            num = (num & (num - 1));
+            count++;
+        }
+		System.out.println(count);
+	} 
+}	
+
+// 0111 0110 
+// 0110 1
+// 0110 0101 
+// 0100 2
+// 0100 0011
+// 0000 3
+
+
+----------------------------------------------------------------------------------------------------------------------
+15)
+public class Q15{
+	public static void main(String[] args){
+		swapper(10);
+		swapper(9);
+	}
+	
+	public static void swapper(int x){ 
+	    int evenBits = (x & 0xAAAAAAAA) >> 1; // Get even bits and shift right
+        int oddBits = (x & 0x55555555) << 1;   // Get odd bits and shift left
+        int res = (evenBits | oddBits);   
+		System.out.println(res);
+	} 
+}	
+
+// 1001
+// 10101010 10101010 10101010 10101010
+//                                1001
+// 00000000 00000000 00000000 00001000
+// 00000000 00000000 00000000 00000100
+
+// 01010101 01010101 01010101 01010101
+//                                1001
+// 00000000 00000000 00000000 00000001
+// 00000000 00000000 00000000 00000010
+// 00000000 00000000 00000000 00000010
+// 00000000 00000000 00000000 00000100
+// 00000000 00000000 00000000 00000110
+
+----------------------------------------------------------------------------------------------------------------------
+
+16)
+public class Q16{
+	public static void main(String[] args){
+		pnz(12);
+		pnz(-11);
+		pnz(0);
+	}
+	public static void pnz(int x){
+		String res = (x==0)? "zero" : (x>0)? "positive" : "negative";
+		System.out.println(res);
+	}
+}	
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+17)
+
+public class Q17{
+	public static void main(String[] args){
+		minfour(1,2,3,4);
+	}
+	
+	public static void minfour(int x, int y, int z, int m){
+		int res = (x<y && x<z && x<m)? x:(z<y && z<x && z<m)? z:(y<z && y<x && y<m)? y : m;
+		System.out.println(res);
+	}
+}	
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+18)
+public class Q18{
+	public static void main(String args[]){
+		check(50);
+		check(39);
+	}
+	
+	public static void check(int a){
+		String result = (a>=40)? "Pass" : "Fail";
+		System.out.println(result);
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+19)
+public class Q19{
+	public static void main(String args[]){
+		check('a');
+		check('A');
+		check('1');
+	}
+	
+	public static void check(char A){
+		int a = (int) A;
+		String result = (a>64 && a<91)? "Uppercase" : (a>96 && a<123)? "Lowercase" : "Not a character";
+		System.out.println(result);
+	}
+}}
+
+----------------------------------------------------------------------------------------------------------------------
+
+20)
+public class Q20{
+	public static void main(String args[]){
+		check(20);
+		check(-120);
+	}
+	
+	public static void check(int A){
+		int result = (A>0)? A : -A;
+		System.out.println("absolute value: " + result);
+	}
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+21)
+public class Q21{
+	static public void main(String me[]){
+		int x = 5;
+		System.out.println(-~x);
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+22)
+import java.util.Scanner;
+public class Q22{
+	public static void main(String[] args){
+		Scanner sc = new Scanner (System.in);
+		System.out.print("Enter first number: ");
+		int a = sc.nextInt();
+		System.out.print("Enter second number: ");
+		int b = sc.nextInt();
+		System.out.println("MENU: ");
+		System.out.println("1. ADDITION ");
+		System.out.println("2. SUBTRACTION ");
+		System.out.println("3. MULTIPLICATION ");
+		System.out.println("4. DIVISION ");
+		System.out.println("5. FIND REMAINDER ");
+		System.out.print("Enter your Option: ");		
+		int c = sc.nextInt();
+		while(c!=6){
+			switch(c){
+				case 1: System.out.println("Addition of " + a + " + " + b + " = " + (a+b));
+						break;
+				case 2: System.out.println("Difference between " + a + " - " + b + " = " + (a-b));
+						break;
+				case 3: System.out.println("Multiplication of " + a + " x " + b + " = " + (a*b));
+						break;
+				case 4: System.out.println("Quotient in division of " + a + " / " + b + " = " + ((float)a/(float)b));
+						break;
+				case 5: System.out.println("Remainder in division of " + a + " and " + b + " = " + ((float)a%(float)b));
+						break;
+				default:System.out.println("INVALID OPTION");
+						break;
+			}
+			System.out.print("Enter your Option: ");
+			c = sc.nextInt();
+		}
+		System.out.println("EXITING PROGRAMMING!");
+	}
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+23)
+
+public class Q23{
+	public static void main(String[] args){
+		int a = 9, b = 10;
+		check(a);
+		check(b);
+	}
+	
+	public static void check(int a){
+		if((a&1) == 0){
+			System.out.println(a + " is even");
+		} else {
+			System.out.println(a + " is odd");
+		}
+	}
+}
+----------------------------------------------------------------------------------------------------------------------
+
+24)
+public class Q24{
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i++) {
+            if ((i & 1) == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+
+}
+
+----------------------------------------------------------------------------------------------------------------------
+
+25)
+
+public class Q25{
+	static public void main(String me[]){
+		int x = 1534, rev = 0;
+		int temp = x;
+		while(x!=0){
+			rev = rev * 10 + x % 10;
+			x = x/10;
+		}
+		System.out.println("Reverse of " + temp + " is " + rev);
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------
